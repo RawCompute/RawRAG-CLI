@@ -8,12 +8,21 @@ authors = [
 ]
 requires-python = ">=3.13"
 dependencies = [
+    "numpy>=2.0.0",
+    "pyfiglet>=1.0.0",
+    "pypdf2>=3.0.0",
     "rich>=15.0.0",
     "typer>=0.28.0",
 ]
 
+[project.optional-dependencies]
+ocr = [
+    "pypdfium2>=5.0.0",
+    "rapidocr>=3.0.0",
+]
+
 [project.scripts]
-rawrag-cli = "rawrag_cli:main"
+rawrag-cli = "rawrag_cli.cli:main"
 
 [build-system]
 requires = ["uv_build>=0.12.21,<0.13.0"]

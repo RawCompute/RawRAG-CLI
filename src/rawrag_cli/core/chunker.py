@@ -1,6 +1,5 @@
 import re
 import threading
-
 import numpy as np
 import PyPDF2
 
