@@ -40,7 +40,7 @@ def index(directory: str = typer.Argument(".", help="Path to database")):
         for path in filepaths:
             # Temporarily removed try/except to expose the exact error line
             text = path.read_text(encoding="utf-8")
-            chunks = chunk_text(text, chunk_size=500, overlap=50) # Passed hardcoded ints just in case
+            chunks = chunk_text(text, chunk_size, chunk_overlap) 
 
             for chunk in chunks:
                 vector = get_embedding(chunk)
