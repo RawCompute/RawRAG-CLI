@@ -1,7 +1,7 @@
 [project]
 name = "rawrag-cli"
 version = "0.1.0"
-description = "Add your description here"
+description = "A local, zero-dependency RAG CLI tool for codebase indexing and retrieval"
 readme = "README.md"
 authors = [
     { name = "Prabal Singh", email = "prabalpsingh2429@gmail.com" }
@@ -13,6 +13,8 @@ dependencies = [
     "pypdf2>=3.0.0",
     "rich>=15.0.0",
     "typer>=0.28.0",
+    "sentence-transformers>=2.2.2",
+    "requests>=2.31.0",
 ]
 
 [project.optional-dependencies]
@@ -22,7 +24,7 @@ ocr = [
 ]
 
 [project.scripts]
-rawrag-cli = "rawrag_cli.cli:main"
+rawrag = "rawrag_cli.cli:app"
 
 [build-system]
 requires = ["uv_build>=0.12.21,<0.13.0"]
