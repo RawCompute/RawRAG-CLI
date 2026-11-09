@@ -7,6 +7,9 @@ _ocr_engine = None
 _ocr_engine_lock = threading.Lock()
 _pdfium_lock = threading.Lock()
 
+from .config import chunk_size as DEFAULT_CHUNK_SIZE
+from .config import chunk_overlap as DEFAULT_CHUNK_OVERLAP
+
 
 def has_readable_text(text):
     tokens = text.split()
@@ -93,7 +96,7 @@ def extract_text_from_pdf(pdf_path):
     return " ".join(text for _, text in extract_pages_from_pdf(pdf_path))
 
 
-def chunk_text(text, chunk_size=500, overlap=50):
+def chunk_text(text, chunk_size=DEFAULT_CHUNK_SIZE, overlap=DEFAULT_CHUNK_OVERLAP):
     words = text.split()
     chunks = []
 
