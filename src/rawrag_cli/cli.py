@@ -7,6 +7,7 @@ import pathlib
 from .core.chunker import chunk_text
 from .core.vector import VectorMath
 from .core.config import chunk_size, chunk_overlap, OLLAMA_URL, DB_PATH
+from .core.embeddings import get_embedding
 
 app = typer.Typer()
 console = Console()
