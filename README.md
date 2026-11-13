@@ -78,16 +78,8 @@ rawrag query "Where is the authentication logic handled?"
 
 ---
 
-## Contributing
-
-We welcome contributions from developers who share our passion for lean, understandable systems engineering. 
-
-**Rules of Engagement:**
-1. **Keep it Framework-Free:** Do not introduce heavy abstractions (LlamaIndex, LangChain, SQLAlchemy). We write raw math and raw SQL.
-2. **Write ADRs:** If you propose a major structural change or a new dependency, write an Architecture Decision Record in `docs/decisions/` first.
-3. **Branching:** Fork the repo and create a feature branch (`feature/ast-chunking` or `fix/sqlite-locks`).
-4. **Testing:** Ensure the core `addvector` and `similarity` matrix operations pass existing tests before submitting a PR.
-
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+For contribution guidelines, see [CONTRIBUTING.md](CONTRIBUTING.md).
